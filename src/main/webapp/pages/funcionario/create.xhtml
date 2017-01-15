@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui">
+
+<h:head></h:head>
+<h:body>
+	<b:well>
+		<h2>Novo Funcionario</h2>
+	</b:well>
+
+	<h:form>
+		<b:panel title="Novo Funcionario">
+			<p:panelGrid columns="2">
+				<h:outputLabel value="Nome:" />
+				<b:inputText value="#{funcionarioBean.funcionario.nome}" />
+				<h:outputLabel value="Sobrenome:" />
+				<b:inputText value="#{funcionarioBean.funcionario.sobrenome}" />
+			</p:panelGrid>
+			<br />
+			<b:commandButton value="Salvar" action="#{funcionarioBean.save()}" />
+		</b:panel>
+	</h:form>
+</h:body>
+</html>
